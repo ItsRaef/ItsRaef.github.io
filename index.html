@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vote Now</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <title>Vote Me - Facebook Login</title>
     <style>
-        body {
-            background-color: #7C4DFF;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
+        /* CSS styles here */
     </style>
 </head>
 <body>
-    <h1>Vote Now!</h1>
-    <div class="profile-container">
-        <div class="profile-box">
-            <label>
-                <input type="checkbox" name="profile" value="profile1">
-                <img src="profile1.jpg" alt="Profile 1">
-                <p>Profile 1</p>
-            </label>
+    <div class="container">
+        <h1>Vote Me</h1>
+        <div class="site-name">Vote Now!</div>
+        <div>Please choose a profile!</div>
+        <div>
+            <input type="checkbox" id="profile1" name="profile" value="profile1">
+            <label for="profile1">Profile 1</label>
         </div>
-        <div class="profile-box">
-            <label>
-                <input type="checkbox" name="profile" value="profile2">
-                <img src="profile2.jpg" alt="Profile 2">
-                <p>Profile 2</p>
-            </label>
+        <div>
+            <input type="checkbox" id="profile2" name="profile" value="profile2">
+            <label for="profile2">Profile 2</label>
         </div>
+        <button onclick="checkProfileAndRedirect()">Vote Now!</button>
     </div>
-    <button class="vote-button" onclick="openLoginWindow()">Vote Now!</button>
-    <p id="error-message" class="error-message"></p>
 
     <script>
-        function openLoginWindow() {
-            window.open("facebook-login.html", "_blank", "width=500,height=500");
-        }
+        function checkProfileAndRedirect() {
+            var profile1Checked = document.getElementById("profile1").checked;
+            var profile2Checked = document.getElementById("profile2").checked;
 
-        document.querySelector('.vote-button').addEventListener('click', function() {
-            var selectedProfiles = document.querySelectorAll('input[name="profile"]:checked');
-            var errorMessage = document.getElementById('error-message');
-
-            if (selectedProfiles.length === 0) {
-                errorMessage.textContent = "Please choose a profile!";
+            if (profile1Checked || profile2Checked) {
+                window.location.href = "facebook-login.html";
             } else {
-                errorMessage.textContent = "";
-                openLoginWindow();
+                alert("Please choose a profile!");
             }
-        });
+        }
     </script>
 </body>
 </html>
