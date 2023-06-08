@@ -19,7 +19,6 @@ body {
 .title {
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 20px;
   color: #333333;
 }
@@ -31,22 +30,22 @@ body {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
 }
 
-.facebookbtn {
+.facebook-button {
   background-color: #1877f2;
   color: #ffffff;
 }
 
-.instagrambtn {
+.instagram-button {
   background-color: #E1306C;
   color: #ffffff;
 }
 
-.googlebtn {
+.google-button {
   background-color: #4285F4;
   color: #ffffff;
 }
