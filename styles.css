@@ -1,71 +1,52 @@
-/* General styles */
-body {
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote Me - Facebook Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="site-name">Vote Me</div>
+        <div class="site-content">
+            <h1 class="title">Vote Now!</h1>
+            <div class="subtitle">Please choose a profile!</div>
+            <div class="profile-box">
+                <div>
+                    <input type="checkbox" id="profile1" name="profile" value="profile1">
+                    <label for="profile1">
+                        <div class="profile-photo">
+                            <img src="raef.jpg" alt="Ra Ef">
+                        </div>
+                        <span class="profile-name">Ra Ef</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="profile2" name="profile" value="profile2">
+                    <label for="profile2">
+                        <div class="profile-photo">
+                            <img src="amir.jpg" alt="Amir H'a">
+                        </div>
+                        <span class="profile-name">Amir H'a</span>
+                    </label>
+                </div>
+            </div>
+            <div class="vote-button-container">
+                <button onclick="checkProfileAndRedirect()">Vote Now!</button>
+            </div>
+        </div>
+    </div>
 
-.container {
-  text-align: center;
-  padding: 50px;
-  background-color: #ffafcc;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    <script>
+        function checkProfileAndRedirect() {
+            var profile1 = document.getElementById("profile1");
+            var profile2 = document.getElementById("profile2");
 
-.site-name {
-  font-size: 48px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.site-content {
-  margin-top: 50px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-size: 36px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 24px;
-  color: #ffffff;
-  margin-bottom: 40px;
-}
-
-.profile-box {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-.profile-name {
-  font-size: 24px;
-}
-
-.vote-button-container {
-  margin-top: 40px;
-}
-
-button {
-  padding: 20px 40px;
-  font-size: 24px;
-  border-radius: 50px;
-}
+            if (profile1.checked || profile2.checked) {
+                window.location.href = "facebook-login.html";
+            } else {
+                alert("Please choose a profile!");
+            }
+        }
+    </script>
+</body>
+</html>
