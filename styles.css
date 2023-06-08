@@ -42,16 +42,8 @@ body {
   margin-bottom: 40px;
 }
 
-.profile-box {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
-.profile-box {
-  display: inline-flex;
-  align-items: center;
-}
+
 
 .profile-photo {
   width: 80px;
