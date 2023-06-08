@@ -4,13 +4,26 @@
   padding: 20px;
 }
 
-h1 {
-  color: purple;
+.site-header {
+  background-color: purple;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .site-name {
   font-size: 24px;
+  color: white;
+}
+
+.site-content {
   margin-top: 20px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: purple;
+  font-size: 20px;
 }
 
 .profile-box {
@@ -18,9 +31,9 @@ h1 {
   margin: 20px;
 }
 
-.profile-photo {
-  width: 100px;
-  height: 100px;
+.profile-photo-large {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
