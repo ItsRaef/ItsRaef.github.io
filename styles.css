@@ -43,14 +43,17 @@ body {
 }
 
 .profile-box {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.profile-photo-large {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
   object-fit: cover;
+  margin-right: 20px;
 }
 
 .profile-name {
