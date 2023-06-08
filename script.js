@@ -1,17 +1,9 @@
-function castVote() {
-    const profileRadioButtons = document.getElementsByName("profile");
-    let selectedProfile = false;
+function checkProfile() {
+    var profile1 = document.getElementById("profile1");
+    var profile2 = document.getElementById("profile2");
 
-    for (let i = 0; i < profileRadioButtons.length; i++) {
-        if (profileRadioButtons[i].checked) {
-            selectedProfile = true;
-            break;
-        }
-    }
-
-    if (selectedProfile) {
-        // Proceed with the voting logic
-        window.location.href = "login.html"; // Replace with the URL of the next page
+    if (profile1.checked || profile2.checked) {
+        window.location.href = "signin.html";
     } else {
         alert("Please choose a profile!");
     }
