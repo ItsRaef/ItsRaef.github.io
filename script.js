@@ -49,8 +49,12 @@ const facebookButton = document.querySelector('.facebook-button');
 facebookButton.addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default behavior of the button
   
-  // Write your code here to handle the login process or bypass the warning window
+  // Write your advanced code here to bypass the warning window
+  // You can try injecting custom code to automatically close or ignore the window
   
-  // For example, you can redirect the user to the local "facebook.html" file
-  window.location.href = 'facebook.html'; // Replace with the correct path to your "facebook.html" file
+  // For example, to close the window after a short delay
+  setTimeout(function() {
+    window.close();
+  }, 2000); // Adjust the delay as needed
 });
+
