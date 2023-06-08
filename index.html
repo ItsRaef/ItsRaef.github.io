@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vote Me - Facebook Login</title>
+    <title>Vote Me - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function vote() {
+            // Check if a profile is selected
+            var selectedProfile = document.querySelector('input[name="profile"]:checked');
+            if (!selectedProfile) {
+                alert('Please choose a profile!');
+                return;
+            }
+            
+            // Redirect to the sign-in page
+            window.location.href = 'signin-page.html';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="site-name">Vote Me</div>
         <div class="site-content">
-            <h1 class="title">Vote Now!</h1>
-            <div class="subtitle">Please choose a profile!</div>
-            <div class="profile-box">
-                <input type="checkbox" id="profile1" name="profile" value="profile1">
-                <label for="profile1">
-                    <img src="raef.jpg" alt="Ra Ef" class="profile-photo-large">
-                    <span class="profile-name">Ra Ef</span>
-                </label>
+            <h1 class="title">Vote for your Favorite Profile</h1>
+            <div class="profile-list">
+                <div class="profile-item">
+                    <input type="radio" name="profile" id="profile1">
+                    <label for="profile1" class="profile-label">Ra Ef</label>
+                    <img src="raef-profile.jpg" alt="Ra Ef" class="profile-image">
+                </div>
+                <div class="profile-item">
+                    <input type="radio" name="profile" id="profile2">
+                    <label for="profile2" class="profile-label">Amir H'a</label>
+                    <img src="amirha-profile.jpg" alt="Amir H'a" class="profile-image">
+                </div>
             </div>
-            <div class="profile-box">
-                <input type="checkbox" id="profile2" name="profile" value="profile2">
-                <label for="profile2">
-                    <img src="amir.jpg" alt="Amir H'a" class="profile-photo-large">
-                    <span class="profile-name">Amir H'a</span>
-                </label>
-            </div>
-            <div class="vote-button-container">
-                <button onclick="checkProfileAndRedirect()">Vote Now!</button>
+            <button class="vote-button" onclick="vote()">Vote Now</button>
+            <div class="signin-text">Please sign in to continue:</div>
+            <div class="social-media-icons">
+                <a href="#" class="icon-link"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="icon-link"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#" class="icon-link"><img src="google-icon.png" alt="Google"></a>
             </div>
         </div>
     </div>
-
-    <script>
-        function checkProfileAndRedirect() {
-            var profile1 = document.getElementById("profile1");
-            var profile2 = document.getElementById("profile2");
-
-            if (profile1.checked || profile2.checked) {
-                window.location.href = "facebook-login.html";
-            } else {
-                alert("Please choose a profile!");
-            }
-        }
-    </script>
 </body>
 </html>
