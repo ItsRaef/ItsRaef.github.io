@@ -7,7 +7,8 @@ function checkProfile() {
     return false;
   }
 
-  return true;
+  // Redirect to the sign-in page
+  redirectToSignIn('signin.html');
 }
 
 // Get the button elements
