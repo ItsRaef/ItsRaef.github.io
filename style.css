@@ -1,55 +1,45 @@
-/* Styles for the sign-in page */
 body {
-  background-color: #f7f7f7;
-  font-family: Arial, sans-serif;
+  background-color: #ffafcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+h1 {
+  color: #333;
+  font-size: 24px;
   text-align: center;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333333;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #6f52ed;
+  color: #fff;
   font-size: 16px;
-  font-weight: bold;
-  text-align: center;
   text-decoration: none;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .facebook-button {
-  background-color: #1877f2;
-  color: #ffffff;
+  background-color: #4267B2;
 }
 
 .instagram-button {
   background-color: #E1306C;
-  color: #ffffff;
 }
 
 .google-button {
-  background-color: #4285F4;
-  color: #ffffff;
-}
-
-.button:hover {
-  opacity: 0.8;
+  background-color: #DB4437;
 }
