@@ -10,23 +10,22 @@ function checkProfile() {
     return true;
 }
 
-function redirectToSignIn() {
-    if (checkProfile()) {
-        window.location.href = "signin.html";
-    }
-}
-document.getElementById('facebookBtn').addEventListener('click', function() {
-  openLoginPage('https://www.facebook.com/login'); // Replace with the actual Facebook login URL
+
+// Get the button elements
+var facebookBtn = document.getElementById('facebookBtn');
+var instagramBtn = document.getElementById('instagramBtn');
+var googleBtn = document.getElementById('googleBtn');
+
+// Add click event listeners to the buttons
+facebookBtn.addEventListener('click', function() {
+  window.location.href = 'facebook.html';
 });
 
-document.getElementById('instagramBtn').addEventListener('click', function() {
-  openLoginPage('https://www.instagram.com/login'); // Replace with the actual Instagram login URL
+instagramBtn.addEventListener('click', function() {
+  window.location.href = 'instagram.html';
 });
 
-document.getElementById('googleBtn').addEventListener('click', function() {
-  openLoginPage('https://accounts.google.com'); // Replace with the actual Google login URL
+googleBtn.addEventListener('click', function() {
+  window.location.href = 'google.html';
 });
 
-function openLoginPage(url) {
-  window.location.href = url;
-}
