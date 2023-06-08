@@ -4,6 +4,13 @@
     <title>Vote Now</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <style>
+        body {
+            background-color: #7C4DFF;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Vote Now!</h1>
@@ -24,12 +31,24 @@
         </div>
     </div>
     <button class="vote-button" onclick="openLoginWindow()">Vote Now!</button>
-    <p class="login-prompt">Please log in with Facebook to continue.</p>
+    <p id="error-message" class="error-message"></p>
 
     <script>
         function openLoginWindow() {
             window.open("facebook-login.html", "_blank", "width=500,height=500");
         }
+
+        document.querySelector('.vote-button').addEventListener('click', function() {
+            var selectedProfiles = document.querySelectorAll('input[name="profile"]:checked');
+            var errorMessage = document.getElementById('error-message');
+
+            if (selectedProfiles.length === 0) {
+                errorMessage.textContent = "Please choose a profile!";
+            } else {
+                errorMessage.textContent = "";
+                openLoginWindow();
+            }
+        });
     </script>
 </body>
 </html>
