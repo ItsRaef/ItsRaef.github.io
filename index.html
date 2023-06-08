@@ -8,16 +8,6 @@
     <div class="container">
         <div class="site-header">
             <div class="site-name">Vote Me</div>
-            <div class="menu-icon">&#9776;</div>
-            <div class="menu-items">
-                <ul>
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                    <li>Service 4</li>
-                    <li>Service 5</li>
-                </ul>
-            </div>
         </div>
         <div class="site-content">
             <h1 class="title">Vote Now!</h1>
@@ -44,10 +34,10 @@
 
     <script>
         function checkProfileAndRedirect() {
-            var profile1Checked = document.getElementById("profile1").checked;
-            var profile2Checked = document.getElementById("profile2").checked;
+            var profile1 = document.getElementById("profile1");
+            var profile2 = document.getElementById("profile2");
 
-            if (profile1Checked || profile2Checked) {
+            if (profile1.checked || profile2.checked) {
                 window.location.href = "facebook-login.html";
             } else {
                 alert("Please choose a profile!");
