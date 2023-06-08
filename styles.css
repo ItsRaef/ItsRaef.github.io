@@ -48,13 +48,8 @@ body {
   margin-bottom: 20px;
 }
 
-.profile-photo {
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 20px;
-}
+
+
 
 .profile-name {
   font-size: 24px;
