@@ -43,18 +43,20 @@ body {
 }
 
 .profile-box {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.profile-photo-large {
-  width: 250px;
-  height: 250px;
+.profile-photo {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  object-fit: cover;
+  margin-right: 20px;
 }
 
 .profile-name {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .vote-button-container {
@@ -62,7 +64,7 @@ body {
 }
 
 button {
-  padding: 20px 40px;
-  font-size: 24px;
-  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 30px;
 }
