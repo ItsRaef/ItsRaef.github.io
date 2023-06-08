@@ -51,8 +51,6 @@ body {
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  display: inline-flex;
-  align-items: center;
 }
 
 
