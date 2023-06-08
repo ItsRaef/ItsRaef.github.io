@@ -42,19 +42,26 @@ googleBtn.addEventListener('click', function() {
   redirectToSignIn('signin.html');
 });
 
-// Select the Facebook login button element
-const facebookButton = document.querySelector('.facebook-button');
+const puppeteer = require('puppeteer');
 
-// Add a click event listener to the login button
-facebookButton.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent the default behavior of the button
-  
-  // Write your advanced code here to bypass the warning window
-  // You can try injecting custom code to automatically close or ignore the window
-  
-  // For example, to close the window after a short delay
-  setTimeout(function() {
-    window.close();
-  }, 2000); // Adjust the delay as needed
-});
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  await page.goto('facebook.html'); // Replace with your desired URL
+
+  // Fill in the login form fields
+  await page.type('#email', 'your-email@example.com');
+  await page.type('#pass', 'your-password');
+
+  // Submit the form
+  await page.click('#loginbutton');
+
+  // Wait for the navigation to complete
+  await page.waitForNavigation();
+
+  // Now you can continue with any desired actions or further automation
+
+  await browser.close();
+})();
 
