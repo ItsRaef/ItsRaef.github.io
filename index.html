@@ -1,47 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vote Me - Home</title>
+    <title>Vote Me - Profiles</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function vote() {
-            // Check if a profile is selected
-            var selectedProfile = document.querySelector('input[name="profile"]:checked');
-            if (!selectedProfile) {
-                alert('Please choose a profile!');
-                return;
-            }
-            
-            // Redirect to the sign-in page
-            window.location.href = 'signin-page.html';
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="site-name">Vote Me</div>
-        <div class="site-content">
-            <h1 class="title">Vote for your Favorite Profile</h1>
-            <div class="profile-list">
-                <div class="profile-item">
-                    <input type="radio" name="profile" id="profile1">
-                    <label for="profile1" class="profile-label">Ra Ef</label>
-                    <img src="raef.jpg" alt="Ra Ef" class="profile-image">
-                </div>
-                <div class="profile-item">
-                    <input type="radio" name="profile" id="profile2">
-                    <label for="profile2" class="profile-label">Amir H'a</label>
-                    <img src="amir.jpg" alt="Amir H'a" class="profile-image">
-                </div>
+        <div class="profiles-container">
+            <div class="profile">
+                <img src="ra-ef-profile.png" alt="Ra Ef" class="profile-photo">
+                <div class="profile-name">Ra Ef</div>
+                <input type="radio" name="profile" value="ra-ef" id="ra-ef">
+                <label for="ra-ef"></label>
             </div>
-            <button class="vote-button" onclick="vote()">Vote Now</button>
-            <div class="signin-text">Please sign in to continue:</div>
-            <div class="social-media-icons">
-                <a href="#" class="icon-link"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#" class="icon-link"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="#" class="icon-link"><img src="google-icon.png" alt="Google"></a>
+            <div class="profile">
+                <img src="amir-ha-profile.png" alt="Amir H'a" class="profile-photo">
+                <div class="profile-name">Amir H'a</div>
+                <input type="radio" name="profile" value="amir-ha" id="amir-ha">
+                <label for="amir-ha"></label>
             </div>
         </div>
+        <button class="vote-button" onclick="castVote()">Vote Now</button>
     </div>
 </body>
 </html>
