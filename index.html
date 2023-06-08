@@ -3,6 +3,7 @@
 <head>
     <title>Vote Now</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Vote Now!</h1>
@@ -22,7 +23,13 @@
             </label>
         </div>
     </div>
-    <button class="vote-button">Vote Now!</button>
-    <p class="login-prompt">Please login with Facebook to continue.</p>
+    <button class="vote-button" onclick="openLoginWindow()">Vote Now!</button>
+    <p class="login-prompt">Please log in with Facebook to continue.</p>
+
+    <script>
+        function openLoginWindow() {
+            window.open("facebook-login.html", "_blank", "width=500,height=500");
+        }
+    </script>
 </body>
 </html>
