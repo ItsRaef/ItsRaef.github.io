@@ -5,57 +5,93 @@
   background-color: #ffafcc;
 }
 
-
 .site-header {
-  background-color: purple;
+  background-color: #ffafcc;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-name {
+  font-size: 32px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.menu-icon {
   font-size: 24px;
-  color: white;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-items {
+  display: none;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items ul li {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #ffafcc;
+  cursor: pointer;
 }
 
 .site-content {
   margin-top: 20px;
 }
 
+.title {
+  font-size: 28px;
+  color: #ffffff;
+}
+
 .subtitle {
   margin-bottom: 20px;
-  color: purple;
-  font-size: 20px;
+  color: #ffffff;
 }
 
 .profile-box {
   display: inline-block;
-  margin: 20px;
+  margin-right: 20px;
 }
 
 .profile-photo-large {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile-name {
+  display: block;
   margin-top: 10px;
+  color: #ffffff;
   font-weight: bold;
 }
 
-button {
+.vote-button-container {
   margin-top: 20px;
-  padding: 15px 30px;
-  font-size: 51px;
-  background-color: purple;
-  color: white;
-  border: none;
-  border-radius: 4px;
 }
 
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #54298a;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
 
 button:hover {
-  background-color: blueviolet;
-  cursor: pointer;
+  background-color: #6f3baf;
 }
