@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Vote Me</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1 class="site-name">Vote Me</h1>
-        <div class="profiles-container">
+    <div class="container">
+        <h1 class="site-name">Vote Me</h1>
+        <p class="vote-now-phrase">Vote Now!</p>
+        <div class="profile-container">
             <div class="profile">
-                <img src="raef.jpg" alt="Ra Ef" class="profile-photo">
-                <div class="profile-name">Ra Ef</div>
-                <input type="radio" name="profile" value="ra-ef" id="ra-ef">
-                <label for="ra-ef"></label>
+                <img src="raef.png" alt="Ra Ef">
+                <h2>Ra Ef</h2>
+                <input type="checkbox" id="profile1">
+                <label for="profile1"></label>
             </div>
             <div class="profile">
-                <img src="amir.jpg" alt="Amir H'a" class="profile-photo">
-                <div class="profile-name">Amir H'a</div>
-                <input type="radio" name="profile" value="amir-ha" id="amir-ha">
-                <label for="amir-ha"></label>
+                <img src="amirha.png" alt="Amir H'a">
+                <h2>Amir H'a</h2>
+                <input type="checkbox" id="profile2">
+                <label for="profile2"></label>
             </div>
         </div>
-        <button class="vote-button" onclick="castVote()">Vote Now</button>
+        <div class="vote-button-container">
+            <button class="vote-button">Vote Now</button>
+        </div>
     </div>
 </body>
 </html>
