@@ -53,6 +53,12 @@ body {
   object-fit: cover;
 }
 
+.profile-box {
+  display: inline-flex;
+  align-items: center;
+}
+
+
 .profile-name {
   font-size: 24px;
 }
