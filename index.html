@@ -6,25 +6,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Vote Me</h1>
-        <div class="site-name">Vote Now!</div>
-        <div>Please choose a profile!</div>
-        <div class="profile-box">
-            <input type="checkbox" id="profile1" name="profile" value="profile1">
-            <label for="profile1">
-                <img src="ra-ef-profile.jpg" alt="Ra Ef" class="profile-photo">
-                <span class="profile-name">Ra Ef</span>
-            </label>
+        <div class="site-header">
+            <div class="site-name">Vote Me</div>
         </div>
-        <div class="profile-box">
-            <input type="checkbox" id="profile2" name="profile" value="profile2">
-            <label for="profile2">
-                <img src="amir-ha-profile.jpg" alt="Amir H'a" class="profile-photo">
-                <span class="profile-name">Amir H'a</span>
-            </label>
-        </div>
-        <div class="vote-button-container">
-            <button onclick="checkProfileAndRedirect()">Vote Now!</button>
+        <div class="site-content">
+            <h1>Vote Now!</h1>
+            <div class="subtitle">Please choose a profile!</div>
+            <div class="profile-box">
+                <input type="checkbox" id="profile1" name="profile" value="profile1">
+                <label for="profile1">
+                    <img src="ra-ef-profile.jpg" alt="Ra Ef" class="profile-photo-large">
+                    <span class="profile-name">Ra Ef</span>
+                </label>
+            </div>
+            <div class="profile-box">
+                <input type="checkbox" id="profile2" name="profile" value="profile2">
+                <label for="profile2">
+                    <img src="amir-ha-profile.jpg" alt="Amir H'a" class="profile-photo-large">
+                    <span class="profile-name">Amir H'a</span>
+                </label>
+            </div>
+            <div class="vote-button-container">
+                <button onclick="checkProfileAndRedirect()">Vote Now!</button>
+            </div>
         </div>
     </div>
 
