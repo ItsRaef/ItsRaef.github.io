@@ -16,10 +16,12 @@ body {
 }
 
 .site-name {
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }
+
 
 .profiles-container {
     display: flex;
