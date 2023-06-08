@@ -51,9 +51,6 @@ body {
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.profile-box {
   display: inline-flex;
   align-items: center;
 }
