@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script>
-    function redirectToSignIn() {
-        window.location.href = "signin.html";
-    }
-</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Vote Me</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="site-name">Vote Me</h1>
-        <p class="vote-now-phrase">Vote Now!</p>
+        <h1 class="title">Vote Me</h1>
+        <p class="subtitle">Vote Now!</p>
         <div class="profile-container">
             <div class="profile">
-                <img src="raef.jpg" alt="Ra Ef">
-                <h2>Ra Ef</h2>
-                <input type="checkbox" id="profile1">
-                <label for="profile1"></label>
+                <img class="profile-img" src="raef.png" alt="Profile 1">
+                <label for="profile1">Ra Ef</label>
+                <input type="radio" id="profile1" name="profile">
             </div>
             <div class="profile">
-                <img src="amir.jpg" alt="Amir H'a">
-                <h2>Amir H'a</h2>
-                <input type="checkbox" id="profile2">
-                <label for="profile2"></label>
+                <img class="profile-img" src="amirha.png" alt="Profile 2">
+                <label for="profile2">Amir H'a</label>
+                <input type="radio" id="profile2" name="profile">
             </div>
         </div>
-        <div class="vote-button-container">
-            <button class="vote-button">Vote Now</button>
-        </div>
+        <button class="vote-button" onclick="checkProfile()">Vote Now</button>
     </div>
-            <button class="vote-button" onclick="checkProfile()">Vote Now</button>
-    </form>
-
     <script src="script.js"></script>
 </body>
 </html>
