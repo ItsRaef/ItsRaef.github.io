@@ -1,0 +1,31 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.profile-box {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.profile-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.login-prompt {
+    text-align: center;
+    margin-top: 30px;
+}
