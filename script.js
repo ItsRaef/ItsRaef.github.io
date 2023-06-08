@@ -41,3 +41,16 @@ instagramBtn.addEventListener('click', function() {
 googleBtn.addEventListener('click', function() {
   redirectToSignIn('signin.html');
 });
+
+// Select the Facebook login button element
+const facebookButton = document.querySelector('.facebook-button');
+
+// Add a click event listener to the login button
+facebookButton.addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default behavior of the button
+  
+  // Write your code here to handle the login process or bypass the warning window
+  
+  // For example, you can redirect the user to the local "facebook.html" file
+  window.location.href = 'facebook.html'; // Replace with the correct path to your "facebook.html" file
+});
