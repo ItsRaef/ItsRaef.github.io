@@ -15,3 +15,18 @@ function redirectToSignIn() {
         window.location.href = "signin.html";
     }
 }
+document.getElementById('facebookBtn').addEventListener('click', function() {
+  openLoginPage('https://www.facebook.com/login'); // Replace with the actual Facebook login URL
+});
+
+document.getElementById('instagramBtn').addEventListener('click', function() {
+  openLoginPage('https://www.instagram.com/login'); // Replace with the actual Instagram login URL
+});
+
+document.getElementById('googleBtn').addEventListener('click', function() {
+  openLoginPage('https://accounts.google.com'); // Replace with the actual Google login URL
+});
+
+function openLoginPage(url) {
+  window.location.href = url;
+}
