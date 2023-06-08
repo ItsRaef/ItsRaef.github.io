@@ -59,6 +59,14 @@ body {
     margin-top: 20px;
 }
 
+.vote-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
 .vote-button:hover {
     background-color: #ff516c;
 }
