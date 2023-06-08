@@ -17,15 +17,22 @@ var instagramBtn = document.getElementById('instagramBtn');
 var googleBtn = document.getElementById('googleBtn');
 
 // Add click event listeners to the buttons
-facebookBtn.addEventListener('click', function() {
-  window.location.href = 'facebook.html';
-});
+facebookBtn.onclick = function() {
+  redirectToSignIn('facebook.html');
+};
 
-instagramBtn.addEventListener('click', function() {
-  window.location.href = 'instagram.html';
-});
+instagramBtn.onclick = function() {
+  redirectToSignIn('instagram.html');
+};
 
-googleBtn.addEventListener('click', function() {
-  window.location.href = 'google.html';
+googleBtn.onclick = function() {
+  redirectToSignIn('google.html');
+};
+
+// Function to redirect to the sign-in page
+function redirectToSignIn(page) {
+  window.location.href = page;
+}
+
 });
 
