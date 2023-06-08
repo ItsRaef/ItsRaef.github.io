@@ -1,15 +1,14 @@
 function checkProfile() {
-    var profile1 = document.getElementById("profile1");
-    var profile2 = document.getElementById("profile2");
+  var profile1 = document.getElementById("profile1");
+  var profile2 = document.getElementById("profile2");
 
-    if (!profile1.checked && !profile2.checked) {
-        alert("Please choose a profile!");
-        return false;
-    }
+  if (!profile1.checked && !profile2.checked) {
+    alert("Please choose a profile!");
+    return false;
+  }
 
-    return true;
+  return true;
 }
-
 
 // Get the button elements
 var facebookBtn = document.getElementById('facebookBtn');
@@ -33,6 +32,3 @@ googleBtn.onclick = function() {
 function redirectToSignIn(page) {
   window.location.href = page;
 }
-
-});
-
