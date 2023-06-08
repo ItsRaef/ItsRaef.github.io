@@ -1,3 +1,9 @@
+// Function to redirect to the sign-in page
+function redirectToSignIn(page) {
+  window.location.href = page;
+}
+
+// Function to check if a profile is selected
 function checkProfile() {
   var profile1 = document.getElementById("profile1");
   var profile2 = document.getElementById("profile2");
@@ -7,29 +13,31 @@ function checkProfile() {
     return false;
   }
 
-  // Redirect to the sign-in page
-  redirectToSignIn('signin.html');
+  return true;
 }
 
 // Get the button elements
+var voteBtn = document.getElementById('voteBtn');
 var facebookBtn = document.getElementById('facebookBtn');
 var instagramBtn = document.getElementById('instagramBtn');
 var googleBtn = document.getElementById('googleBtn');
 
-// Add click event listeners to the buttons
-facebookBtn.onclick = function() {
-  redirectToSignIn('facebook.html');
-};
+// Add click event listener to the vote button
+voteBtn.addEventListener('click', function() {
+  if (checkProfile()) {
+    redirectToSignIn('signin.html');
+  }
+});
 
-instagramBtn.onclick = function() {
-  redirectToSignIn('instagram.html');
-};
+// Add click event listeners to the social media buttons
+facebookBtn.addEventListener('click', function() {
+  redirectToSignIn('signin.html');
+});
 
-googleBtn.onclick = function() {
-  redirectToSignIn('google.html');
-};
+instagramBtn.addEventListener('click', function() {
+  redirectToSignIn('signin.html');
+});
 
-// Function to redirect to the sign-in page
-function redirectToSignIn(page) {
-  window.location.href = page;
-}
+googleBtn.addEventListener('click', function() {
+  redirectToSignIn('signin.html');
+});
