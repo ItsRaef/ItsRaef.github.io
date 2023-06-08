@@ -1,44 +1,45 @@
-body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+/* General styles */
+.container {
+  text-align: center;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
+  color: purple;
 }
 
-.profile-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.site-name {
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 .profile-box {
-    margin: 0 20px;
-    text-align: center;
-    cursor: pointer;
+  display: inline-block;
+  margin: 20px;
 }
 
-.profile-box img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.vote-button {
-    display: block;
-    margin: 30px auto;
-    padding: 15px 30px;
-    font-size: 20px;
-    border: none;
-    background-color: #ff0000;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
+.profile-name {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.login-prompt {
-    text-align: center;
-    margin-top: 30px;
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
 }
