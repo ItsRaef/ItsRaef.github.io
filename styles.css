@@ -48,6 +48,11 @@ body {
   margin-bottom: 20px;
 }
 
+.profile-box {
+  display: inline-flex;
+  align-items: center;
+}
+
 .profile-photo {
   width: 80px;
   height: 80px;
