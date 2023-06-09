@@ -4,13 +4,71 @@
   <meta charset="UTF-8">
   <title>Sign In</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+      background-color: #AB47BC; /* Adjust the background color as needed */
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #FFFFFF; /* Adjust the button background color as needed */
+      text-decoration: none;
+      color: #000000; /* Adjust the button text color as needed */
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #E0E0E0; /* Adjust the hover background color as needed */
+    }
+
+    .button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>Please Sign In to Continue</h1>
   <div class="button-container">
-    <a class="button" id="facebook-button" href="facebook.html">Facebook</a>
-    <a class="button" id="instagram-button" href="instagram.html">Instagram</a>
-    <a class="button" id="google-button" href="google.html">Google</a>
+    <a class="button" id="facebook-button" href="facebook.html">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3A2021_Facebook_icon.svg&psig=AOvVaw1r9ncZQ47oMdh8bQZ84M-2&ust=1686387055249000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCV18Xntf8CFQAAAAAdAAAAABAE" alt="Facebook Icon">
+      Facebook
+    </a>
+    <a class="button" id="instagram-button" href="instagram.html">
+      <img src="https://commons.wikimedia.org/wiki/File:Instagram_icon.png" alt="Instagram Icon">
+      Instagram
+    </a>
+    <a class="button" id="google-button" href="google.html">
+      <img src="https://www.iconfinder.com/icons/7123025/logo_google_g_icon" alt="Google Icon">
+      Google
+    </a>
   </div>
   <script src="script.js"></script>
 </body>
