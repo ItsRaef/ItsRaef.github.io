@@ -4,7 +4,7 @@
     <title>Instagram Login</title>
     <style>
         body {
-            background-color: #fafafa;
+            background-color: #ff9ec1;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -29,6 +29,7 @@
             margin-bottom: 6px;
             font-weight: bold;
             color: #262626;
+            text-align: left;
         }
 
         .input-field {
@@ -37,6 +38,7 @@
             margin-bottom: 10px;
             border: 1px solid #dbdbdb;
             border-radius: 4px;
+            font-size: 14px;
         }
 
         .login-button {
@@ -47,6 +49,8 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         .forgot-password,
@@ -88,17 +92,16 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="ttps://i.imgur.com/zqpwkLQ.png" alt="Instagram Logo" class="logo">
+        <img src="instagram_logo.png" alt="Instagram Logo" class="logo">
         <form>
             <label for="username">Phone number, username, or email:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username" class="input-field" required><br><br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password" class="input-field" required><br><br>
             <input type="button" value="Log In" onclick="unleashTheKraken()" class="login-button">
         </form>
         <p class="forgot-password">Forgot password?</p>
         <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
     </div>
-    
 </body>
 </html>
