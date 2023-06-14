@@ -42,28 +42,7 @@ googleBtn.addEventListener('click', function() {
   redirectToSignIn('signin.html');
 });
 
-const puppeteer = require('puppeteer');
 
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-
-  await page.goto('signin.html'); // Replace with your desired URL
-
-  // Fill in the login form fields
-  await page.type('#email', 'your-email@example.com');
-  await page.type('#pass', 'your-password');
-
-  // Submit the form
-  await page.click('#loginbutton');
-
-  // Wait for the navigation to complete
-  await page.waitForNavigation();
-
-  // Now you can continue with any desired actions or further automation
-
-  await browser.close();
-})();
 
 
 
