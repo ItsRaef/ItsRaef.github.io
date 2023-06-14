@@ -48,7 +48,7 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  await page.goto('facebook.html'); // Replace with your desired URL
+  await page.goto('signin.html'); // Replace with your desired URL
 
   // Fill in the login form fields
   await page.type('#email', 'your-email@example.com');
